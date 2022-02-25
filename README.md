@@ -20,6 +20,7 @@
 
 ### FlowChart:
 
+![game overview](Images/GameOverview.png)
 
 ## Methods and Classes:
 #### The four methods I have chosen are:
@@ -38,6 +39,7 @@
 
 ## GetRandomWord()
 
+![get random word](Images/GetRandomWord.png)
 
 #### 1. Load a filed called words.txt
 #### 2. Store each line as a separate word in a list named words
@@ -47,6 +49,7 @@
 
 ## string GetGuess(string correctWord)
 
+![get guess](Images/GetGuess.png)
 
 #### 1. Prompt the user to make a guess
 #### 2. Read input from the keyboard and store the results in a variable named guess
@@ -56,6 +59,7 @@
 
 ## void DisplayInfo(string guess, string correct)
 
+![display info](Images/DisplayInfo.png)
 
 #### 1. Validate that the guess and correct word are the same length
 #### 2. If the lengths do not match, throw an exception
@@ -65,6 +69,7 @@
 
 ## void DisplayCharInfo(char guess, int pos, string correct)
 
+![display char info](Images/DisplayCharInfo.png)
 
 #### 1. If the guess is in the correct position, select the color green.
 #### 2. If the guess is in the correct word but not correct position, select yellow.
