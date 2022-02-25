@@ -1,0 +1,15 @@
+/Users/derek/Documents/GitHub/WordleProject/bin/Debug/net5.0/WordleProject.deps.json
+/Users/derek/Documents/GitHub/WordleProject/bin/Debug/net5.0/WordleProject.runtimeconfig.json
+/Users/derek/Documents/GitHub/WordleProject/bin/Debug/net5.0/WordleProject.runtimeconfig.dev.json
+/Users/derek/Documents/GitHub/WordleProject/bin/Debug/net5.0/WordleProject.dll
+/Users/derek/Documents/GitHub/WordleProject/bin/Debug/net5.0/ref/WordleProject.dll
+/Users/derek/Documents/GitHub/WordleProject/bin/Debug/net5.0/WordleProject.pdb
+/Users/derek/Documents/GitHub/WordleProject/obj/Debug/net5.0/WordleProject.csproj.AssemblyReference.cache
+/Users/derek/Documents/GitHub/WordleProject/obj/Debug/net5.0/WordleProject.GeneratedMSBuildEditorConfig.editorconfig
+/Users/derek/Documents/GitHub/WordleProject/obj/Debug/net5.0/WordleProject.AssemblyInfoInputs.cache
+/Users/derek/Documents/GitHub/WordleProject/obj/Debug/net5.0/WordleProject.AssemblyInfo.cs
+/Users/derek/Documents/GitHub/WordleProject/obj/Debug/net5.0/WordleProject.csproj.CoreCompileInputs.cache
+/Users/derek/Documents/GitHub/WordleProject/obj/Debug/net5.0/WordleProject.dll
+/Users/derek/Documents/GitHub/WordleProject/obj/Debug/net5.0/ref/WordleProject.dll
+/Users/derek/Documents/GitHub/WordleProject/obj/Debug/net5.0/WordleProject.pdb
+/Users/derek/Documents/GitHub/WordleProject/obj/Debug/net5.0/WordleProject.genruntimeconfig.cache
