@@ -25,7 +25,9 @@ namespace WordleProject
         }
 
         /// <summary>
-        /// 
+        /// Asks the user to make a guess, reads the guess, returns the users response
+        /// or displays an error message and asks the user to make another guess if the first
+        /// guess is not the correct length.
         /// </summary>
         /// <param name="correctWord"></param>
         /// <returns></returns>
@@ -37,7 +39,12 @@ namespace WordleProject
             // 4.Otherwise, display an error message and ask them to make another guess.
             return null;
         }
-
+        /// <summary>
+        /// Validates that te guess and correct word are the same length, throws an exception if not,
+        /// and if they match iterate through each character.
+        /// </summary>
+        /// <param name="guess"></param>
+        /// <param name="correct"></param>
         public static void DisplayInfo(string guess, string correct)
         {
             // 1. Validate that the guess and correct word are the same length
@@ -46,7 +53,15 @@ namespace WordleProject
             // - Use the DisplayCharInfo method to determine what color to print the character
         }
 
-
+        /// <summary>
+        /// If the guess is in the correct position, select the color green. If the guess
+        /// is not correct but in the right position, return yellow. The code will select 
+        /// red otherwise. The code displays the guess then resets the color back to white before
+        /// returning.
+        /// </summary>
+        /// <param name="guess"></param>
+        /// <param name="pos"></param>
+        /// <param name="correct"></param>
         public static void DisplayCharInfo(char guess, int pos, string correct)
         {
             // 1. If the guess is in the correct position, select the color green.
