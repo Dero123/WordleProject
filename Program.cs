@@ -6,7 +6,23 @@ namespace WordleProject
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+           if (args.Length > 0 && args[0] == "test")
+           {
+               TestAll();
+               return;
+           }
+        }
+
+        public static void TestAll()
+        {
+            bool testDisplayCharInfo = TestDisplayCharInfo.RunTest();
+            Console.WriteLine($"Test DisplayCharInfo(char guess, int pos, string correct): {testDisplayCharInfo}");
+
+            bool testDisplayInfo = TestDisplayInfo.RunTest();
+            Console.WriteLine($"Test DisplayInfo(string guess, string correct): {testDisplayInfo}");
+
+            bool testGetGuess = TestGetGuess.RunTest();
+            Console.WriteLine($"Test GetGuess(string correctWord): {testGetGuess}");
         }
 
         /// <summary>
