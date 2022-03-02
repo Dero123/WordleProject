@@ -21,9 +21,16 @@ namespace WordleProject
 
         // What are weird inputs that are technically possible?
         // N/A
+        Console.Write("You should see Fruit in all red except 'i' should be yellow: ");
+        Program.DisplayInfo("Fruit", "Anime");
 
+        Console.Write("You should see Dog!s in all red: ");
+        Program.DisplayInfo("Dog!s", "Anime");
 
-            return false;
+        Console.Write("You should see Apple in all green: ");
+        Program.DisplayInfo("Apple","Apple");
+
+            return true;
         }
     }
 }

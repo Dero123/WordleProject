@@ -22,6 +22,14 @@ namespace WordleProject
         // What are weird inputs that are technically possible?
         // N/A
 
+            Console.Write("You should see 'A' in Green: ");
+            Program.DisplayCharInfo('A', 0, "Apple");
+
+            Console.Write("You should see 'A' in Yellow: ");
+            Program.DisplayCharInfo('A', 3, "Apple");
+
+            Console.Write("You should see '!' in red: ");
+            Program.DisplayCharInfo('!', 3, "Apple");
 
             return false;
         }
