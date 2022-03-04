@@ -24,13 +24,16 @@ namespace WordleProject
 
             Console.Write("You should see 'A' in Green: ");
             Program.DisplayCharInfo('A', 0, "Apple");
+            Console.WriteLine();
 
             Console.Write("You should see 'A' in Yellow: ");
             Program.DisplayCharInfo('A', 3, "Apple");
+            Console.WriteLine();
 
             Console.Write("You should see '!' in red: ");
             Program.DisplayCharInfo('!', 3, "Apple");
-
+            Console.WriteLine();
+            
             return false;
         }
     }

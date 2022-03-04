@@ -6,11 +6,11 @@ namespace WordleProject
     {
         static void Main(string[] args)
         {
-           if (args.Length > 0 && args[0] == "test")
-           {
-               TestAll();
-               return;
-           }
+            if (args.Length > 0 && args[0] == "test")
+            {
+                TestAll();
+                return;
+            }
         }
 
         public static void TestAll()
@@ -72,7 +72,29 @@ namespace WordleProject
             // 3. If they match, iterate through each character:
             // - Use the DisplayCharInfo method to determine what color to print the character
 
-            
+
+            if (guess.Length != correct.Length)
+            {
+                throw new Exception($"Expected {guess} and {correct} to have the same length.");
+            }
+            else
+            {
+
+
+                int ix = 0;
+
+
+                while (ix < correct.Length)
+                {
+                    char guessChar = guess[ix];
+                    char correctChar = correct[ix];
+                    Program.DisplayCharInfo(guessChar, ix, correct);
+                    ix++;
+                }
+                Console.WriteLine();
+
+            }
+
         }
 
         /// <summary>
@@ -94,24 +116,19 @@ namespace WordleProject
 
             if (guess == correct[pos])
             {
-                // TODO: Color = green 
+                Console.ForegroundColor = ConsoleColor.Green;
             }
             else if (correct.Contains(guess))
             {
-                // TODO: Color = yellow
+                Console.ForegroundColor = ConsoleColor.Yellow;
             }
-            else 
+            else
             {
-                // TODO: Color = red
+                Console.ForegroundColor = ConsoleColor.Red;
             }
-            Display(guess);
-            // TODO: Color = white 
+            Console.Write($"{guess}");
+            Console.ForegroundColor = ConsoleColor.White;
 
-            // TODO(jcollard 2022-03-04): You can change the color of the font being displayed
-            // by setting this value
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.ForegroundColor = ConsoleColor.Yellow;
         }
 
     }
