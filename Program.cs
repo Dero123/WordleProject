@@ -53,6 +53,10 @@ namespace WordleProject
             // 2.Read input from the keyboard and store the results in a variable named guess
             // 3.If guess is the correct length(the guess and random word should be the same length), return the guess.
             // 4.Otherwise, display an error message and ask them to make another guess.
+
+            // TODO(jcollard 2022-03-04): This method will be very similar to the GetGuess method you wrote in the
+            // Console guessing game. I would look there as an example.
+
             return null;
         }
         /// <summary>
@@ -67,6 +71,8 @@ namespace WordleProject
             // 2. If the lengths do not match, throw an exception
             // 3. If they match, iterate through each character:
             // - Use the DisplayCharInfo method to determine what color to print the character
+
+            
         }
 
         /// <summary>
@@ -100,6 +106,12 @@ namespace WordleProject
             }
             Display(guess);
             // TODO: Color = white 
+
+            // TODO(jcollard 2022-03-04): You can change the color of the font being displayed
+            // by setting this value
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.ForegroundColor = ConsoleColor.Yellow;
         }
 
     }
