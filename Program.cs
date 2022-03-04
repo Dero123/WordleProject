@@ -85,6 +85,21 @@ namespace WordleProject
             // 3. If the guess is not in the correct word, select red.
             // 4. Display the guess
             // 5. Reset the color back to white before returning
+
+            if (guess == correct[pos])
+            {
+                // TODO: Color = green 
+            }
+            else if (correct.Contains(guess))
+            {
+                // TODO: Color = yellow
+            }
+            else 
+            {
+                // TODO: Color = red
+            }
+            Display(guess);
+            // TODO: Color = white 
         }
 
     }
