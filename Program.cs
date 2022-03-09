@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace WordleProject
 {
@@ -10,6 +11,14 @@ namespace WordleProject
             {
                 TestAll();
                 return;
+            }
+
+            string correctWord = GetRandomWord();
+            string guess = "";
+            while (correctWord != guess)
+            {
+                guess = GetGuess(correctWord);
+                DisplayInfo(guess,correctWord);
             }
         }
 
@@ -37,7 +46,30 @@ namespace WordleProject
             // 3. Generate a random number between 0 and `words.Count` and store the result in
             //    a variable called `ix`
             // 4. Return the word at position `ix`. (e.g. `words[ix]`)
-            return null;
+            List<string> correctWord = new List<string>();
+
+            correctWord.Add("Anime");
+            correctWord.Add("Manga");
+            correctWord.Add("Frogs");
+            correctWord.Add("Lemon");
+            correctWord.Add("Shows");
+            correctWord.Add("Phone");
+            correctWord.Add("Soaps");
+            correctWord.Add("Dance");
+            correctWord.Add("Crabs");
+            correctWord.Add("Again");
+            correctWord.Add("Times");
+            correctWord.Add("Crime");
+            correctWord.Add("Finds");
+            correctWord.Add("Lines");
+
+            Random Generator = new Random();
+            int index = Generator.Next(0, correctWord.Count);
+
+            string randomCorrectWord = correctWord[index];
+            
+
+            return randomCorrectWord.ToUpper();
         }
 
         /// <summary>
@@ -56,8 +88,21 @@ namespace WordleProject
 
             // TODO(jcollard 2022-03-04): This method will be very similar to the GetGuess method you wrote in the
             // Console guessing game. I would look there as an example.
+            
+                Console.WriteLine("Make a guess.");
+                string guess = Console.ReadLine().ToUpper();
 
-            return null;
+                if (guess.Length == correctWord.Length)
+                {
+                    return guess;
+                }
+
+                else
+                {
+                    Console.WriteLine($"You must guess a word of length {correctWord.Length}");
+                }
+
+            return GetGuess(correctWord);
         }
         /// <summary>
         /// Validates that te guess and correct word are the same length, throws an exception if not,
