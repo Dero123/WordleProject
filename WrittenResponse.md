@@ -104,9 +104,38 @@ implements an algorithm used in your program and a call to that procedure.
 
 The first program code segment must be a student-developed procedure that:
 
+- [ ] Defines the procedure's name and return type (if necessary)
+- [ ] Contains and uses one or more parameters that have an effect on the functionality of the procedure
+- [ ] Implements an algorithm that includes sequencing, selection, and iteration
+
 
 ```csharp
+ public static void DisplayInfo(string guess, string correct)
+        {
 
+            if (guess.Length != correct.Length)
+            {
+                throw new Exception($"Expected {guess} and {correct} to have the same length.");
+            }
+            else
+            {
+
+
+                int ix = 0;
+
+
+                while (ix < correct.Length)
+                {
+                    char guessChar = guess[ix];
+                    char correctChar = correct[ix];
+                    Program.DisplayCharInfo(guessChar, ix, correct);
+                    ix++;
+                }
+                Console.WriteLine();
+
+            }
+
+        }
 ```
 
 ### 3c ii.
@@ -114,20 +143,23 @@ The first program code segment must be a student-developed procedure that:
 The second program code segment must show where your student-developed procedure is being called in your program.
 
 ```csharp
-
+DisplayInfo(guess,correctWord);
 ```
 
 ### 3c iii.
 
 Describes in general what the identified procedure does and how it contributes to the overall functionality of the program.
 
- 
+ Validates that te guess and correct word are the same length, throws an exception if not, and if they match iterate through each character.
 
 ### 3c iv.
 
 Explains in detailed steps how the algorithm implemented in the identified procedure works. Your explanation must be detailed enough for someone else to recreate it.
 
-
+1. Validate that the guess and correct word are the same length
+2. If the lengths do not match, throw an exception
+3. If they match, iterate through each character:
+   - Use the DisplayCharInfo method to determine what color to print the character
 
 ## 3d
 
@@ -137,7 +169,13 @@ Provide a written response that does all three of the following:
 
 Describes two calls to the procedure identified in written response 3c. Each call must pass a different argument(s) that causes a different segment of code in the algorithm to execute.
 
+First call:
 
+Program.DisplayInfo("Fruit", "Anime");
+
+Second call:
+
+Program.DisplayInfo("Apple","Apple");
 
 ### 3d ii.
 
@@ -145,16 +183,18 @@ Describes what condition(s) is being tested by each call to the procedure
 
 Condition(s) tested by the first call:
  
-
+Tests that the procedure returns the users input colored red by passing in an incorrect word.
 
 Condition(s) tested by the second call:
 
+Test that the procedure returns the users input colored green by passing in a correct word.
 
 ### 3d iii.
 
 Result of the first call:
 
-
+When the procedure is called with an incorrect value it returns the users input colored red.
 
 Result of the second call:
 
+When the procedure is called with a correct value it returns the users input colored green.
